@@ -31,11 +31,7 @@ return foo(55)
 
 
 ** Set Fonts
-
-
 ** Set Project Icons
-
-
 ** Setup Dashboard
 
 

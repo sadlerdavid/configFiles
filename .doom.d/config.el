@@ -21,9 +21,9 @@
 ;; font string. You generally only need these two:
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
-(setq doom-font (font-spec :family "Fira Code" :size 12 :weight 'light)
+(setq doom-font (font-spec :family "RobotoMono Nerd Font" :weight 'regular)
       doom-variable-pitch-font (font-spec :family "Noto Sans Myanmar" :size 13)
-      doom-big-font (font-spec :family "Fira Code" :size 20)
+      doom-big-font (font-spec :family "RobotoMono Nerd Font" :size 26 :weight 'regular)
       ivy-posframe-font (font-spec :family "Fira Code" :size 15))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
@@ -76,3 +76,6 @@
       "h L" #'global-keycast-mode
       "f t" #'find-in-dotfiles
       "f T" #'browse-dotfiles)
+
+;; Org Superstar / Bullets config
+(setq org-superstar-headline-bullets-list '("⁖" "◉" "○" "✸" "✿"))

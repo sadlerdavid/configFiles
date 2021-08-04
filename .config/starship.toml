@@ -15,8 +15,8 @@ add_newline = true
 success_symbol = "[➜](bold green)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
 
 # Disable the package module, hiding it from the prompt completely
-[package]
-disabled = true
+# [package]
+# disabled = true
 
 [custom.bash]
 command = "echo 🚀"
@@ -32,3 +32,6 @@ when = 'test "$STARSHIP_SHELL" = "fish"'
 command = "echo 🦀"
 shell = 'bash'
 when = '[ "$STARSHIP_SHELL" == "" ]' # not set in Nushell
+
+# Timeout for Brew Command on upgrade
+# command_timeout = 120
