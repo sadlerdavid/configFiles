@@ -56,3 +56,23 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+;; Implicit /g flag on evil ex substitution, because I less often want the
+;; default behavior.
+(setq evil-ex-substitute-global t)
+
+;;; Keybinds
+
+(map! (:after evil-org
+       :map evil-org-mode-map
+       :n "gk" (cmd! (if (org-on-heading-p)
+                         (org-backward-element)
+                       (evil-previous-visual-line)))
+       :n "gj" (cmd! (if (org-on-heading-p)
+                         (org-forward-element)
+                       (evil-next-visual-line))))
+
+      :leader
+      "h L" #'global-keycast-mode
+      "f t" #'find-in-dotfiles
+      "f T" #'browse-dotfiles)
