@@ -1,47 +1,67 @@
 #+TITLE:  Literate Config File
 
-** Python
+* USE OF SOURCE BLOCKS
+
+** PYTHON
 # use return statement
 # Entire source block will get indented and used as the body of main()
-#+begin_src python
-def foo(x):
-  if x>0:
-    return x+1
-
-  else:
-    return x-1
-
-return foo(55)
-#+end_src
+#+BEGIN_SRC python :results output
+print("Hello Big Beautiful World")
+#+END_SRC
 
 #+RESULTS:
-: 56
-
+: Hello Big Beautiful World
 
 
 ** LISP
 # Tangle this files output to create dynamic config.
-#+begin_src emacs-lisp :tangle yes
-(+ 2 9876)
-#+end_src
-
+#+BEGIN_SRC emacs-lisp :tangle yes
+(+ 300 435)
+#+END_SRC
 
 #+RESULTS:
-: 9878
+: 735
+
+#+BEGIN_SRC emacs-lisp
+(current-time-string)
+#+END_SRC
+
+#+RESULTS:
+: Wed Aug  4 20:44:48 2021
 
 
-** Set Fonts
-** Set Project Icons
-** Setup Dashboard
+** BASH
+#+BEGIN_SRC bash :dir ~/
+  pwd
+#+END_SRC
+
+#+RESULTS:
+: /Users/jennifersadler
 
 
+* Set Fonts
+;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
+;; font string. You generally only need these two:
+;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
+;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
+#+BEGIN_SRC
+(setq doom-font (font-spec :family "RobotoMono Nerd Font" :size 12 :weight 'regular)
+      doom-variable-pitch-font (font-spec :family "Noto Sans Myanmar" :size 13)
+      doom-big-font (font-spec :family "RobotoMono Nerd Font" :size 18 :weight 'regular)
+      ivy-posframe-font (font-spec :family "Fira Code" :size 15))
+#+END_SRC
 
 
+* Set Project Icons
 
-*Tasks
+
+* Setup Dashboard
+
+
+* Tasks
 ** TODO Model Tasks, EverNote, Calendar, Projects into a single place
 ** PROJ Literate Org configuration
 *** WAIT Awaiting actionable information from {person}
 *** TODO Setup a caputure
-** TODO find a way to create repeats without typing TODO everytime
+*** TODO find a way to create repeats without typing TODO everytime
 *** HOLD
