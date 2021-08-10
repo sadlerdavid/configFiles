@@ -34,4 +34,4 @@ shell = 'bash'
 when = '[ "$STARSHIP_SHELL" == "" ]' # not set in Nushell
 
 # Timeout for Brew Command on upgrade
-# command_timeout = 120
+command_timeout = 120
